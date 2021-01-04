@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" >
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<title>Weather Dashboard Homework</title>
+<style></style>
+<body>
+<!-- Begin Container -->
+<div class="container-fluid">
+        <!-- Begin Main Nav -->
+
+        <nav class="nav-wrapper grey darken-4">
+            <a href ="#" class="brand-logo center white-text">Weather Dashboard</a>
+        </nav>
+        
+        <div class="row ">
+            <div class="col s12 m4 l3" id="search" >
+                <div class="card citySearch">
+                <div class="card-body">
+                <p class="left">Search for a city:</p>
+                <form class="form-inline">
+                <input type="text" id="keyword" placeholder="Search">
+                
+                <button id ="search-city" class =" btn-floating blue">
+                    <i class="material-icons">search</i></button>
+                    </form>
+           
+               <br>
+
+                <ul id="cityQuicklinks" class="">
+                    <li><a href="#" id="ql1">Melbourne</a></li>
+                    <li><a href="#" id="ql2">Sydney</a></li>
+                    <li><a href="#" id="ql3">Cape Town</a></li>
+
+                    <li><a href="#" id="ql4">Atlanta</a></li>
+                    <li><a href="#" id="ql5">Los Angelos</a></li>
+
+                    <li><a href="#" id="ql6">Tokyo</a></li>
+                    <li><a href="#" id="ql7">Bangkok</a></li>
+                    <li><a href="#" id="ql8">Mumbai</a></li>
+                </ul>  
+             </div>
+        </div>
+            </div>
+
+             
+            <div class="col s12 m9 l9">
+                <div id="current-weather" class="card">
+                <div class="card-body">
+                    <div id="city-date-icon">
+                        <span id='city-name'>
+                        </span>
+                        <span id='current-icon'></span>
+                    </div>
+                    <p class="card-text" id="temperature"></p>
+                    <p class="card-text" id="humidity"></p>
+                    <p class="card-text" id="wind"></p>
+                    <p class="card-text" id="uv"></p>
+                    </ul>
+                </div>
+                <div class="row">
+
+                    <div class="card five-day">
+                    
+                        <div class="card-body">
+                            5 Day Forecast
+                        </div>
+                
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-2">
+
+                            <div class="card forecast">
+                        
+                                <div class="card-body">
+                                    
+                                    <p class="firstDate"></p>
+                                    <p class="firstIcon"></p>
+                                    <p class="firstTemp"></p>
+                                    <p class="firstHumidity"></p>
+
+                                </div>
+                    
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="card forecast">
+                            
+                                <div class="card-body">
+                                   
+                                    <p class="secondDate"></p>
+                                    <p class="secondIcon"></p>
+                                    <p class="secondTemp"></p>
+                                    <p class="secondHumidity"></p>
+
+                                </div>
+                        
+                            </div>
+    
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="card forecast">
+                            
+                                <div class="card-body">
+                                    
+                                    <p class="thirdDate"></p>
+                                    <p class="thirdIcon"></p>
+                                    <p class="thirdTemp"></p>
+                                    <p class="thirdHumidity"></p>
+
+                                </div>
+                        
+                            </div>
+    
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="card forecast">
+                            
+                                <div class="card-body">
+
+                                    <p class="forthDate"></p>
+                                    <p class="forthIcon"></p>
+                                    <p class="forthTemp"></p>
+                                    <p class="forthHumidity"></p>
+
+                                </div>
+                        
+                            </div>
+    
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="card forecast">
+                            
+                                <div class="card-body">
+
+                                    <p class="fifthDate"></p>
+                                    <p class="fifthIcon"></p>
+                                    <p class="fifthTemp"></p>
+                                    <p class="fifthHumidity"></p>
+
+                                </div>
+                        
+                            </div>
+    
+                        </div>
+            
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
+    
+
+ <!-- include scripts here -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type="text/javascript" src="/Users/Linda/Documents/Weather Dashboard Homework/main.js"></script>
+           
+</html>
