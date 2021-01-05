@@ -1,23 +1,34 @@
-// API key
+$(document).ready(function(){
+    $("#search-cityBtn").click(function() {
+       var city = $("#city").val();
+       if(city !=""){
+        
+        
+        $.ajax({
+          url: 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric' + "&appid=bf80762bf471616f18755a04e3a3cc0a",
+          method:'GET',
+          dataType: "jsonp",
+          success: function(data){
+              var widget = show(data);
+              
 
-var APIKey = "&appid=bf80762bf471616f18755a04e3a3cc0a";
-var city = localStorage.getItem("previousSearch");
+              $("#show").html(widget);
+              $("#city").val("");
 
-
-// Url link to the weather api for access to the datatbase current weather & 5 day forecast
-
-var urlWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + city + APIKey;
-var urlForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + APIKey;
-
-// This gets the data requested
-
-$.ajax({
-    url: urlWeather,
-    method: "GET"
-})
-// the returned data will be stored in the response function
-.then(function(response) {
-    console.log(querWeather);
-    console.log(response);
-
+          }
 });
+
+       } else{
+           $("#error").html("Field cannot be empty");
+
+       }
+    });
+});
+function show(data){
+    return "<h3>The Current Weather in " + data.name + "," + data.sys.country + "</h3>" +
+           "<h6><strong>Temperature</strong>:" + data.main.temp + "</h6>" +
+           "<h6><strong>Humidity</strong>:" + data.main.humidity + "</h6>" + 
+           "<h6><strong>Wind Speed</strong>:" + data.wind.speed + "</h6>" ;
+           
+           
+}
